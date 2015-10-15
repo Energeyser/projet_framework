@@ -1,3 +1,6 @@
+<?php
+require_once"lib/limonade.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,9 +35,9 @@
 
     <div class="container">
 
-      <form class="form-signin">
+      <form class="form-signin" action>
         <h2 class="form-signin-heading">Connexion</h2>
-        <label for="inputEmail" class="sr-only">Identifiant</label>
+        <label for="inputId" class="sr-only">Identifiant</label>
         <input type="text" id="inputId" class="form-control" placeholder="Identifiant" required autofocus>
         <label for="inputMdp" class="sr-only">Mot de passe</label>
         <input type="password" id="inputMdp" class="form-control" placeholder="Mot de passe" required>
@@ -49,3 +52,7 @@
     </div> <!-- /container -->
   </body>
 </html>
+
+<?php
+run();
+?>
