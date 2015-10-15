@@ -1,6 +1,3 @@
-<?php
-require_once"lib/limonade.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -52,7 +49,3 @@ require_once"lib/limonade.php";
     </div> <!-- /container -->
   </body>
 </html>
-
-<?php
-run();
-?>

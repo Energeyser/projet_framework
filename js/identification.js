@@ -1,5 +1,4 @@
-function identification(f)
-{
+function identification(f) {
    var pseudoOk = verifPseudo(f.pseudo);
    var mdpOk = verifMdp(f.mdp);
 
@@ -12,8 +11,7 @@ function identification(f)
    }
 }
 
-function verifPseudo(champ)
-{
+function verifPseudo(champ) {
    if(document.getElementById("inputId") == "admin")
    {
       surligne(champ, true);
@@ -26,10 +24,8 @@ function verifPseudo(champ)
    }
 }
 
-function verifMdp(champ)
-{
-   if(document.getElementById("inputMdp") == "admin")
-   {
+function verifMdp(champ) {
+   if(document.getElementById("inputMdp") == "admin") {
       surligne(champ, true);
       return false;
    }
@@ -40,8 +36,7 @@ function verifMdp(champ)
    }
 }
 
-function surligne(champ, erreur)
-{
+function surligne(champ, erreur) {
    if(erreur)
       champ.style.backgroundColor = "#fba";
    else
