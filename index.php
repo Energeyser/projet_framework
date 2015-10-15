@@ -17,6 +17,7 @@
     <!-- Custom styles for this template -->
     <link href="./css/style.css" rel="stylesheet">
 
+
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
@@ -32,7 +33,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action>
+      <form class="form-signin" action="connexion.php">
         <h2 class="form-signin-heading">Connexion</h2>
         <label for="inputId" class="sr-only">Identifiant</label>
         <input type="text" id="inputId" class="form-control" placeholder="Identifiant" required autofocus>
