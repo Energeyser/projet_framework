@@ -35,9 +35,9 @@
       <form class="form-signin">
         <h2 class="form-signin-heading">Connexion</h2>
         <label for="inputEmail" class="sr-only">Identifiant</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Identifiant" required autofocus>
-        <label for="inputPassword" class="sr-only">Mot de passe</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+        <input type="text" id="inputId" class="form-control" placeholder="Identifiant" required autofocus>
+        <label for="inputMdp" class="sr-only">Mot de passe</label>
+        <input type="password" id="inputMdp" class="form-control" placeholder="Mot de passe" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Se souvenir de moi
