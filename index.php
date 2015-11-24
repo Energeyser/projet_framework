@@ -28,7 +28,7 @@
 
     <div class="container">
 
-      <form class="form-signin" action="connexion.php">
+      <form class="form-signin" action="connexion.php" method="post">
         <h2 class="form-signin-heading">Connexion</h2>
         <label for="inputId" class="sr-only">Identifiant</label>
         <input type="text" id="inputId" class="form-control" placeholder="Identifiant" required autofocus>
