@@ -31,9 +31,9 @@
       <form class="form-signin" action="connexion.php" method="post">
         <h2 class="form-signin-heading">Connexion</h2>
         <label for="inputId" class="sr-only">Identifiant</label>
-        <input type="text" id="inputId" class="form-control" placeholder="Identifiant" required autofocus>
+        <input type="text" id="inputId" name="inputId" class="form-control" placeholder="Identifiant" required autofocus>
         <label for="inputMdp" class="sr-only">Mot de passe</label>
-        <input type="password" id="inputMdp" class="form-control" placeholder="Mot de passe" required>
+        <input type="password" id="inputMdp" name="inputMdp" class="form-control" placeholder="Mot de passe" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Se souvenir de moi

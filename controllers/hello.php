@@ -1,8 +1,8 @@
 <?php
 
 function hello(){
-    set("var", "Hello world!");
-    return layout('admin_layout.html.php');
+    set("var", "*Ceci est une variable*");
+    return render('../views/hello.tpl.php','../views/layout/admin_layout.html.php');
 }
 
 ?>
