@@ -10,11 +10,11 @@ function promos(){
 }
 
 function fichiers(){
-    return render('../views/promos.tpl.php','../views/layout/admin_layout.html.php');
+    return render('../views/fichiers.tpl.php','../views/layout/admin_layout.html.php');
 }
 
 function donnees(){
-    return render('../views/promos.tpl.php','../views/layout/admin_layout.html.php');
+    return render('../views/donnees.tpl.php','../views/layout/admin_layout.html.php');
 }
 
 ?>
