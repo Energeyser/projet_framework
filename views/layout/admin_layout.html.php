@@ -25,8 +25,8 @@
   </head>
 
   <body>
-    <div id="side">
-        <?php if (isset($side)) echo $side; ?>
+    <div id="main">
+        <?php if (isset($main)) echo $main; ?>
     </div>
   </body>
 </html>

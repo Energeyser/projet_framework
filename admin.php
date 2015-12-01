@@ -2,7 +2,8 @@
 
 require_once '/lib/limonade.php';
 
-dispatch('/', 'hello');
+dispatch('/', 'accueil');
+dispatch('/promos', 'promos');
 
 run();
 ?>
