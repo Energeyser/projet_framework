@@ -6,7 +6,7 @@ if($_POST['inputId'] == "test" && $_POST['inputMdp'] == "test"){
 }
 else{
     echo("id ou mdp erroné");
-}
+} test
 
 ?>
 
