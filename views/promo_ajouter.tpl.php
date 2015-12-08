@@ -1,8 +1,7 @@
 <?php content_for('main'); ?>
     <h1>Données</h1></br>
     <form class="ajout_promo" action="../controllers/promos/promo_ajouter.php" method="post" enctype="multipart/form-data">
-        <h2 class="ajout-donnees-heading">Ajouter des données</h2>
-        <h3>Etudiant(e) :</h3>
+        <h2 class="ajout-donnees-heading">Ajouter une promo</h2>
         <label for="inputPromo" class="sr-only">Promo</label>
         <input type="text" id="promo" name="promo" class="form-control" required autofocus><br/>
         <label for="inputLibelle" class="sr-only">Libellé :</label>
