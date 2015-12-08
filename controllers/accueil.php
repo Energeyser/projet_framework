@@ -2,7 +2,19 @@
 
 function accueil(){
     //--------------Connexion BDD--------------
-    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+        $reponse = $bdd->query('SELECT * FROM document');
+
+        while ($donnees = $reponse->fetch()) {
+            ?>
+            <p>rang : <?php echo $donnees['rang']; ?></p>
+            <?php
+        }
+    }
+    catch(Exception $e) {
+            die('Erreur : '.$e->getMessage());
+    }
 
     set("var", "*Ceci est une variable*");
     return render('../views/accueil.tpl.php','../views/layout/admin_layout.html.php');
