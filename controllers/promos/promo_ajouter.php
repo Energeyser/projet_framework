@@ -35,7 +35,7 @@ $req->execute(array(
 	));
 
 
-    echo '<br/>La promo a bien été ajoutée !<br/>La page sera actualisée automatiquement dans 3 secondes.';
+    echo '<br/>La promo a bien été ajoutée !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/promos">cliquez ici</a>.';
 
 header('refresh:3;url=../../admin.php/promos');
 ?>
