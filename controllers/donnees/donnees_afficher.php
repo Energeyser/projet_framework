@@ -1,4 +1,6 @@
 <?php
+// inutile car on a pas a rajouter des donnees
+/*
 //connection à la base de données
 try
 {
@@ -22,5 +24,5 @@ $req->execute(array(
     'ip' => $ip
 	));
 
-echo 'Les données ont bien été ajoutées !';
+echo 'Les données ont bien été ajoutées !';*/
 ?>

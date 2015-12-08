@@ -34,7 +34,7 @@
               </table>
             </div>
         <p>
-            <button type="button" class="btn btn-lg btn-default">Ajouter</button>
+            <a href="./ajouter_promo"><button type="button" class="btn btn-lg btn-default">Ajouter</button></a>
             <button type="button" class="btn btn-lg btn-default">Modifier</button>
             <button type="button" class="btn btn-lg btn-default">Supprimer</button>
         </p>
