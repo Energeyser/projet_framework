@@ -38,4 +38,5 @@
             <button type="button" class="btn btn-lg btn-default">Modifier</button>
             <button type="button" class="btn btn-lg btn-default">Supprimer</button>
         </p>
+        <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 <?php end_content_for(); ?>

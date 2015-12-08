@@ -17,4 +17,8 @@ function donnees(){
     return render('../views/donnees.tpl.php','../views/layout/admin_layout.html.php');
 }
 
+function donnees_ajouter(){
+    return render('../views/donnees_ajouter.tpl.php','../views/layout/admin_layout.html.php');
+}
+
 ?>

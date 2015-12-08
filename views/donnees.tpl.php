@@ -34,9 +34,9 @@
               </table>
             </div>
         <p>
-            <button type="button" class="btn btn-lg btn-default">Ajouter</button>
+            <a href="./ajouter_donnees"><button type="button" class="btn btn-lg btn-default">Ajouter</button>
             <button type="button" class="btn btn-lg btn-default">Modifier</button>
             <button type="button" class="btn btn-lg btn-default">Supprimer</button>
         </p>
-        <a href="./admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+        <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 <?php end_content_for(); ?>
