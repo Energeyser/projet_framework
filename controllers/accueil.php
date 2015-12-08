@@ -1,6 +1,9 @@
 <?php
 
 function accueil(){
+    //--------------Connexion BDD--------------
+    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+
     set("var", "*Ceci est une variable*");
     return render('../views/accueil.tpl.php','../views/layout/admin_layout.html.php');
 }
