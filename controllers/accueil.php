@@ -2,8 +2,6 @@
 
 function accueil(){
     //--------------Connexion BDD--------------
-    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
-    //--------------Connexion BDD--------------
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
         $reponse = $bdd->query('SELECT * FROM document');
