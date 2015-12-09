@@ -20,8 +20,21 @@ if (isset($_FILES['fichier']) AND $_FILES['fichier']['error'] == 0)
                 {
                         // On peut valider le fichier et le stocker définitivement
                         move_uploaded_file($_FILES['fichier']['tmp_name'], '../uploads/' . basename($_FILES['fichier']['name']));
-                        echo "L'envoi a bien été effectué !";
                 }
 }
+
+//insertion des valeurs dans la base de données
+$req = $bdd->prepare('INSERT INTO document(rang, promo, libelle, fichier) VALUES(:rang, :promo, :libelle, :fichier)');
+$req->execute(array(
+	'rang' => '0',
+	'promo' => $_POST['promo'],
+	'libelle' => $_POST['libelle'],
+    'fichier' => $_FILES['fichier']['name']
+	));
+
+
+    echo '<br/>La promo a bien été ajoutée !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/promos">cliquez ici</a>.';
+
+header('refresh:3;url=../../admin.php/promos');
 
 ?>
