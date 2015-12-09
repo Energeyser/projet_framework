@@ -1,42 +1,70 @@
 <?php content_for('main'); ?>
     <h1>Données</h1></br>
-    <div class="row">
+    <?php
+    try {
+        $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+        $reponse = $bdd->query('SELECT * FROM data');
+    ?>
+        <div class="row">
             <div class="col-md-6">
-              <table class="table">
+            <table class="table">
                 <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                  </tr>
+                    <tr>
+                        <th>Identifiant</th>
+                        <th>Nom Fils</th>
+                        <th>Prénom Fils</th>
+                        <th>Date de naissance</th>
+                        <th>Téléphone mobile</th>
+                        <th>Courriel</th>
+                    </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                  </tr>
+                    <?php
+                    while($donnees = $reponse->fetch()) {
+                    ?>
+                        <tr>
+                            <td><?php echo $donnees['identifiant']?></td>
+                            <td><?php echo $donnees['nom_fils']?></td>
+                            <td><?php echo $donnees['prenom_fils']?></td>
+                            <td><?php echo $donnees['ddn_fils']?></td>
+                            <td><?php echo $donnees['tel_mobile']?></td>
+                            <td><?php echo $donnees['courriel']?></td>
+                        </tr>
+                    <?php
+                    }
+                    ?>
                 </tbody>
-              </table>
+            </table>
             </div>
-        <p>
-            <a href="./ajouter_donnees"><button type="button" class="btn btn-lg btn-default">Ajouter</button>
-            <button type="button" class="btn btn-lg btn-default">Modifier</button>
-            <button type="button" class="btn btn-lg btn-default">Supprimer</button>
-        </p>
+    <?php
+    } catch(Exception $e) {
+        die('Erreur: '.$e->getMessage());
+    }
+    ?>
+            <p>
+                <a href="./ajouter_donnees"><button type="button" class="btn btn-lg btn-default">Ajouter</button>
+                <button type="button" class="btn btn-lg btn-default">Modifier</button>
+                <button type="button" class="btn btn-lg btn-default">Supprimer</button>
+            </p>
+
+        <?php
+            try {
+                $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+                $reponse = $bdd->query('SELECT * FROM data');
+
+                $data = array();
+                $i = 0;
+                $tableHeight;
+                while ($donnees = $reponse->fetch()) {
+                    $data[$i] = array($donnees['id'],$donnees['identifiant'],$donnees['nom_fils'],$donnees['prenom_fils'],$donnees['ddn_fils'],$donnees['tel_mobile'],$donnees['courriel']);
+                    $i = $i + 1;
+                    ?> <p> id:<?php echo $donnees['id']; ?> </p> <?php
+                }
+            }
+            catch(Exception $e) {
+                    die('Erreur : '.$e->getMessage());
+            }
+        ?>
+
         <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 <?php end_content_for(); ?>
