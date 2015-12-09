@@ -43,7 +43,7 @@
     ?>
 
     <p>
-        <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire</button>
+        <a href="./extraire_donnees"><button type="button" class="btn btn-lg btn-default">Extraire</button>
         <button type="button" class="btn btn-lg btn-default">Modifier</button>
     </p>
     <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
