@@ -6,9 +6,9 @@
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    <th>libellé</th>
+                    <th>nom du fichier</th>
+                    <th>promo</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -16,26 +16,25 @@
                     <td>1</td>
                     <td>Mark</td>
                     <td>Otto</td>
-                    <td>@mdo</td>
+                    <td>menu deroulant</td>
                   </tr>
                   <tr>
                     <td>2</td>
                     <td>Jacob</td>
                     <td>Thornton</td>
-                    <td>@fat</td>
+                    <td>menu deroulant</td>
                   </tr>
                   <tr>
                     <td>3</td>
                     <td>Larry</td>
                     <td>the Bird</td>
-                    <td>@twitter</td>
+                    <td>menu deroulant</td>
                   </tr>
                 </tbody>
               </table>
             </div>
         <p>
-            <button type="button" class="btn btn-lg btn-default">Ajouter</button>
-            <button type="button" class="btn btn-lg btn-default">Modifier</button>
+            <a href="./ajouter_fichiers"><button type="button" class="btn btn-lg btn-default">Ajouter</button>
             <button type="button" class="btn btn-lg btn-default">Supprimer</button>
         </p>
         <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
