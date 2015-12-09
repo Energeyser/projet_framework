@@ -1,33 +1,12 @@
 <?php content_for('main'); ?>
-    <script>
-        $(function() {
-          /* Affichage du menu déroulant au clic */
-           $("#menu-deroulant-style").on("click", function() {
-             /* $("#menu-deroulant-style-on").show(); */
-             $("#menu-deroulant-style-on").show();
-           });
-
-          /* Disparition du menu déroulant au clic sur le bouton OK */
-          $("#bouton-valid-style").on("click", function() {
-              $("#menu-deroulant-style-on").hide();
-           });
-
-          /* Disparition du menu déroulant au clic hors de la zone (sauf sur le champ input #menu-deroulant-style) */
-          $( document ).on( "click", function( e ){
-            if ( $( e.target ).closest( "#menu-deroulant-style-on" )[0] === undefined ){
-                if ( (e.target.id != "menu-deroulant-style-on") && (e.target.id != "menu-deroulant-style") ){
-                    $( "#menu-deroulant-style-on" ).hide();
-                }
-            }
-          });
-        });
-    </script>
 
     <!--connexion à la base de données pour afficher la liste des promos dans le tableau-->
     <?php
+        //initialisation des variables
+        $n = '0';
         try {
             $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
-            $reponse = $bdd->query('SELECT promo FROM document');
+            $reponse = $bdd->query('SELECT promo FROM document GROUP BY promo');
     ?>
 
     <h1>Fichiers</h1></br>
@@ -38,16 +17,13 @@
         <label for="inputFichier" class="sr-only">Fichier : </label>
         <input type="file" id="fichier" name="fichier" class="form-control" required autofocus><br/>
         <label for="inputPromo" class="sr-only">Promo : </label>
-        <div class="input-prepend" >
-            <input type="text" placeholder="Aucune Promo" class="input-large" id="menu-deroulant-style">
-        </div>
-
-
-        <div id="menu-deroulant-style-on">
+        <div id="checkbox_promos">
 
             <?php while($donnees = $reponse->fetch()) { ?>
-                <label for="option1"><?php echo $donnees['promo'] ?> </label><input type="checkbox" name="checkbox1" id="checkbox1" value="1"/><br />
-            <?php } ?>
+                <label for="option<?php echo $n ?>"><?php echo $donnees['promo'] ?> </label><input type="checkbox" name="promo" id="promo" value="<?php echo $donnees['promo'] ?>"/><br />
+            <?php
+                $n++;
+            } ?>
 
         </div>
 
@@ -61,11 +37,6 @@
             }
         ?>
 
-        <p>
-            <button type="button" class="btn btn-lg btn-default">Ajouter</button>
-            <button type="button" class="btn btn-lg btn-default">Modifier</button>
-            <button type="button" class="btn btn-lg btn-default">Supprimer</button>
-        </p>
-        <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+        <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 
 <?php end_content_for(); ?>
