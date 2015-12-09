@@ -10,14 +10,19 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
+
+
 //insertion des valeurs dans la base de données
 $req = $bdd->prepare('INSERT INTO document(rang, promo, libelle, fichier) VALUES(:rang, :promo, :libelle, :fichier)');
 $req->execute(array(
-	'rang' => $rang,
-	'promo' => $promo,
-	'libelle' => $libelle,
-	'fichier' => $fichier,
+	'rang' => '0',
+	'promo' => $_POST['promo'],
+	'libelle' => ' ',
+    'fichier' => ' '
 	));
 
-echo 'La promo a bien été ajoutée !';
+
+    echo '<br/>La promo a bien été ajoutée !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/promos">cliquez ici</a>.';
+
+header('refresh:3;url=../../admin.php/promos');
 ?>
