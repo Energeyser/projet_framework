@@ -18,16 +18,28 @@
         <input type="file" id="fichier" name="fichier" class="form-control" required autofocus><br/>
         <label for="inputPromo" class="sr-only">Promo : </label>
         <div id="checkbox_promos">
-
+            <table class="table">
+            <thead>
+                <tr>
+                    <th>Promo</th>
+                </tr>
+            </thead>
+            <tbody>
             <?php while($donnees = $reponse->fetch()) { ?>
-                <label for="option<?php echo $n ?>"><?php echo $donnees['promo'] ?> </label><input type="checkbox" name="promo" id="promo" value="<?php echo $donnees['promo'] ?>"/><br />
+             <tr>
+                        <td><label for="option<?php echo $n ?>"><?php echo $donnees['promo'] ?> </label></td>
+                        <td><input type="radio" name="promo" id="promo" value="<?php echo $donnees['promo'] ?>"></td>
+            </tr>
             <?php
                 $n++;
             } ?>
+                </tbody>
+            </table>
 
         </div>
-
         <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
+        <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+
 
       </form>
 
@@ -37,6 +49,5 @@
             }
         ?>
 
-        <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 
 <?php end_content_for(); ?>
