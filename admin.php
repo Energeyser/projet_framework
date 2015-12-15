@@ -9,6 +9,7 @@ dispatch('/supprimer_promo','promo_supprimer');
 dispatch('/fichiers', 'fichiers');
 dispatch('/ajouter_fichiers', 'fichiers_ajouter');
 dispatch('/donnees', 'donnees');
+dispatch('/modifier_donnees/*','modifier_donnees');
 dispatch('/extraire_donnees', 'extraire_donnees');
 
 

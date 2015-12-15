@@ -4,6 +4,7 @@
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
         $reponse = $bdd->query('SELECT * FROM data');
+        $id_button = 0;
     ?>
         <div class="row">
             <div class="col-md-6">
@@ -22,30 +23,32 @@
                     <?php
                     while($donnees = $reponse->fetch()) {
                     ?>
-                        <tr>
+                        <tr id="tab_donnees">
                             <td><?php echo $donnees['identifiant']?></td>
                             <td><?php echo $donnees['nom_fils']?></td>
                             <td><?php echo $donnees['prenom_fils']?></td>
                             <td><?php echo $donnees['ddn_fils']?></td>
                             <td><?php echo $donnees['tel_mobile']?></td>
                             <td><?php echo $donnees['courriel']?></td>
-                            <td><button type="button" class="btn btn-lg btn-default">Modifier</button></td>
+                            <td><a href="./modif_donnees/:<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-default modifier">Modifier</button></a></td>
                         </tr>
                     <?php
+                        $id_button ++;
                     }
                     ?>
                 </tbody>
             </table>
             </div>
+
     <?php
     } catch(Exception $e) {
         die('Erreur: '.$e->getMessage());
     }
     ?>
 
-    <p>
+    <div>
         <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire</button>
 
-    </p>
+    </div>
     <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 <?php end_content_for(); ?>

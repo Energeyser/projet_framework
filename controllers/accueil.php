@@ -26,6 +26,10 @@ function donnees(){
     return render('../views/donnees.tpl.php','../views/layout/admin_layout.html.php');
 }
 
+function modifier_donnees(){
+    return render('../views/modifier_donnees.tpl.php','../views/layout/admin_layout.html.php');
+}
+
 function extraire_donnees(){
     return render('../views/extraire_donnees.tpl.php','../views/layout/admin_layout.html.php');
 }
