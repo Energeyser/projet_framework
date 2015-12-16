@@ -4,7 +4,6 @@
     try {
         $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
         $reponse = $bdd->query('SELECT * FROM data');
-        $id_button = 0;
     ?>
         <div class="row">
             <div class="col-md-6">
