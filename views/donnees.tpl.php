@@ -32,7 +32,6 @@
                             <td><a href="./modifier_donnees?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-default modifier">Modifier</button></a></td>
                         </tr>
                     <?php
-                        $id_button ++;
                     }
                     ?>
                 </tbody>
