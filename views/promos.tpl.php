@@ -9,6 +9,7 @@
         <h2>Promos</h2></br>
         <div class="row">
             <div class="col-md-6">
+            <a href="./ajouter_promo"><button type="button" class="btn btn-lg btn-suppr">Ajouter</button></a>
             <table class="table">
                 <thead>
                     <tr>
@@ -22,7 +23,7 @@
                         <tr>
                             <td><?php echo $donnees['promo']?></td>
                             <td><a href="./modifier_promo?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-modif">Modifier</button></a></td>
-                            <td><a href="../controllers/promos/promo_supprimer.php?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-suppr">Supprimer</button></a></td>
+                            <td><a href="../controllers/promos/promo_supprimer.php?promo=<?php echo $donnees['promo']?>"><button type="button" class="btn btn-lg btn-suppr">Supprimer</button></a></td>
                         </tr>
                     <?php
                     }

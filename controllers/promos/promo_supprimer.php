@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id'];
+$promo = $_GET['promo'];
 //connection à la base de données
 try
 {
@@ -13,7 +13,7 @@ catch(Exception $e)
 
 
 //insertion des valeurs dans la base de données
-$sql = $bdd->prepare('DELETE FROM document WHERE id = "'.$id.'" ');
+$sql = $bdd->prepare('DELETE FROM document WHERE promo = "'.$promo.'" ');
 $sql->execute();
 
     echo '<br/>La promo a bien été supprimee !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/donnees">cliquez ici</a>.';
