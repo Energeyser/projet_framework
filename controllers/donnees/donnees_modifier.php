@@ -12,12 +12,10 @@ catch(Exception $e)
 
 
 //insertion des valeurs dans la base de données
-$sql = $bdd->prepare('MERGE INTO data USING data WHEN MATCHED THEN UPDATE SET data.identifiant = "'.$POST['new_identifiant'].'" ');
-$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+$sql = $bdd->prepare('MERGE INTO data USING data WHEN NOT MATCHED THEN UPDATE SET data.identifiant = :new_id ');
+$sql->execute(array(':new_id' => $_POST['new_identifiant']));
 
-mysql_close();
+    echo '<br/>Les données ont bien été modifiées !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/donnees">cliquez ici</a>.';
 
-    echo '<br/>La promo a bien été ajoutée !<br/>Si vous n\'êtes pas redirigé automatiquement au bout de quelques secondes, <a href="../../admin.php/promos">cliquez ici</a>.';
-
-header('refresh:3;url=../../admin.php/promos');
+header('refresh:3;url=../../admin.php/donnees');
 ?>

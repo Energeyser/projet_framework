@@ -1,5 +1,4 @@
 <?php content_for('main'); ?>
-    <link href="./css/style.css" rel="stylesheet">
     <div class="container">
         <form class="accueil">
             <h2>Que souhaitez vous modifier?</h2>
