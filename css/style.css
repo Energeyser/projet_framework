@@ -58,11 +58,32 @@ h1 {
 .btn-modif {
     color:#fff;
     background-color: #337ab7;
-    border-color: #98B2C7
+    border-color: #98B2C7;
 }
 
 .btn-suppr {
     color: #fff;
     background-color: #E9383F;
-    border-color: #DE9191
+    border-color: #DE9191;
+}
+
+.btn-retour {
+    position:fixed;
+    color:#fff;
+    background-color: #337ab7;
+    border-color: #1D72B7;
+    bottom: 15px;
+    right: 15px;
+    padding: 30px 18px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+}
+
+.promos {
+    width: 20%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }

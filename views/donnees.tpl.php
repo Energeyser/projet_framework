@@ -29,7 +29,7 @@
                             <td><?php echo $donnees['ddn_fils']?></td>
                             <td><?php echo $donnees['tel_mobile']?></td>
                             <td><?php echo $donnees['courriel']?></td>
-                            <td><a href="./modifier_donnees?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-default modifier">Modifier</button></a></td>
+                            <td><a href="./modifier_donnees?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-modif modifier">Modifier</button></a></td>
                         </tr>
                     <?php
                     }
@@ -48,5 +48,5 @@
         <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire au format .xls</button>
 
     </div>
-    <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+    <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
 <?php end_content_for(); ?>
