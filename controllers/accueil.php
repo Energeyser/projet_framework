@@ -32,11 +32,11 @@ function donnees(){
 }
 
 function modifier_donnees(){
-    return render('../views/modifier_donnees.tpl.php','../views/layout/vues_layout.html.php');
+    return render('../views/donnees_modifier.tpl.php','../views/layout/vues_layout.html.php');
 }
 
 function extraire_donnees(){
-    return render('../views/extraire_donnees.tpl.php','../views/layout/vues_layout.html.php');
+    return render('../views/donnees_extraire.tpl.php','../views/layout/vues_layout.html.php');
 }
 
 ?>
