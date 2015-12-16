@@ -45,7 +45,7 @@
     ?>
 
     <div>
-        <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire</button>
+        <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire au format .xls</button>
 
     </div>
     <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
