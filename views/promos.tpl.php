@@ -1,6 +1,6 @@
 <?php content_for('main'); ?>
     <link href="./css/style.css" rel="stylesheet">
-    <div class="container">
+    <div class="promos">
         <h2>Promos</h2></br>
         <?php
         try {
@@ -35,5 +35,5 @@
         die('Erreur: '.$e->getMessage());
     }
     ?>
-    <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+    <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
 <?php end_content_for(); ?>
