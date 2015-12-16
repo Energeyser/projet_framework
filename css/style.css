@@ -55,24 +55,14 @@ h1 {
     margin: 0 auto;
 }
 
-.btn_accueil {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 10px;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-      touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
+.btn-modif {
+    color:#fff;
+    background-color: #337ab7;
+    border-color: #98B2C7
+}
+
+.btn-suppr {
+    color: #fff;
+    background-color: #E9383F;
+    border-color: #DE9191
 }

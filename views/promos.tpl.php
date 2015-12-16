@@ -21,8 +21,8 @@
                     ?>
                         <tr>
                             <td><?php echo $donnees['promo']?></td>
-                            <td><button type="button" class="btn btn-lg btn-default">Modifier</button></td>
-                            <td><button type="button" class="btn btn-lg btn-default">Supprimer</button></td>
+                            <td><button type="button" class="btn btn-lg btn-modif">Modifier</button></td>
+                            <td><button type="button" class="btn btn-lg btn-suppr">Supprimer</button></td>
                         </tr>
                     <?php
                     }
