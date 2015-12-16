@@ -30,7 +30,7 @@
                             <td><?php echo $donnees['ddn_fils']?></td>
                             <td><?php echo $donnees['tel_mobile']?></td>
                             <td><?php echo $donnees['courriel']?></td>
-                            <td><a href="./modif_donnees/:<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-default modifier">Modifier</button></a></td>
+                            <td><a href="./modifier_donnees?id=<?php echo $donnees['id']?>"><button type="button" class="btn btn-lg btn-default modifier">Modifier</button></a></td>
                         </tr>
                     <?php
                         $id_button ++;
