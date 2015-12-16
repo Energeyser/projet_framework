@@ -25,7 +25,7 @@
         <input type="text" id="new_mobile" name="new_mobile" class="form-control" placeholder="<?php echo $donnees['tel_mobile'] ?>"><br/>
         <label for="inputMail" class="sr-only">Adresse mail : </label>
         <input type="text" id="new_mail" name="new_mail" class="form-control" placeholder="<?php echo $donnees['courriel'] ?>"><br/>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
     </form>
     <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 <?php end_content_for(); ?>
