@@ -2,7 +2,7 @@
     <h1>Données</h1></br>
     <?php
     try {
-        $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+        $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
         $reponse = $bdd->query('SELECT * FROM data');
     ?>
         <div class="row">
