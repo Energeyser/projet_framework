@@ -2,16 +2,14 @@
 
     <!--connexion à la base de données pour afficher la liste des promos dans le tableau-->
     <?php
-        //initialisation des variables
-        $n = '0';
+    $n = 0;
         try {
             $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
             $reponse = $bdd->query('SELECT promo FROM document GROUP BY promo');
     ?>
 
-    <h1>Fichiers</h1></br>
-    <form class="ajout_fichiers" action="../controllers/fichiers/fichiers_ajouter.php" method="post" enctype="multipart/form-data">
-        <h2 class="ajout-donnees-heading">Ajouter un fichier</h2>
+    <h1>Modification du fichier</h1></br>
+    <form class="modif_fichiers" action="../controllers/fichiers/fichiers_modifier.php" method="post" enctype="multipart/form-data">
         <label for="inputLibelle" class="sr-only">Libellé : </label>
         <input type="text" id="libelle" name="libelle" class="form-control" required autofocus><br/>
         <label for="inputFichier" class="sr-only">Fichier : </label>
@@ -37,8 +35,8 @@
             </table>
 
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
-        <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
+        <a href=""><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 
 
       </form>
