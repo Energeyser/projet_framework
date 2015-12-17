@@ -16,7 +16,6 @@ function promo_modifier(){
     return render('../views/promo_modifier.tpl.php','../views/layout/vues_layout.html.php');
 }
 
-
 function fichiers(){
     return render('../views/fichiers.tpl.php','../views/layout/vues_layout.html.php');
 }
@@ -28,7 +27,6 @@ function fichiers_ajouter(){
 function fichiers_modifier(){
     return render('../views/fichiers_modifier.tpl.php','../views/layout/vues_layout.html.php');
 }
-
 
 function donnees(){
     return render('../views/donnees.tpl.php','../views/layout/vues_layout.html.php');
