@@ -1,35 +1,51 @@
 <?php
+    $format='csv';
+    var_dump($format);
 
-//connection à la base de données
-try
-{
-	$bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
-    $results = $bdd->query('SELECT * FROM data');
-}
-catch(Exception $e)
-{
-        die('Erreur : '.$e->getMessage());
-}
+    $sql = "SELECT * FROM data";
 
-if ($results = $bdd->query('SELECT * FROM data'))
-{
+    mysql_connect('localhost', 'rentree', 'rentree');
 
-    $handle = tmpfile();
-    $row    = mysql_fetch_assoc($results);
+    mysql_select_db('rentree');
 
-    fputcsv($handle, array_keys($row), ';');
+    $export = mysql_query ( $sql ) or die ( "Sql error : " . mysql_error( ) );
+    var_dump($export);
+    $fields = mysql_num_fields ( $export );
 
-    do
+    for ( $i = 0; $i < $fields; $i++ )
     {
-    	fputcsv($handle, $row, ';');
+        $header .= mysql_field_name( $export , $i ) . "\t";
     }
-    while($row = mysql_fetch_assoc($results));
 
-    header('Content-Type: application/csv');
-    fpassthru($handle);
-}
-else
-{
-    exit('Query Error');
-}
+    while( $row = mysql_fetch_row( $export ) )
+    {
+        $line = '';
+        foreach( $row as $value )
+        {
+            if ( ( !isset( $value ) ) || ( $value == "" ) )
+            {
+                $value = "\t";
+            }
+            else
+            {
+                $value = str_replace( '"' , '""' , $value );
+                $value = '"' . $value . '"' . "\t";
+            }
+            $line .= $value;
+        }
+        $data .= trim( $line ) . "\n";
+    }
+    $data = str_replace( "\r" , "" , $data );
+
+    if ( $data == "" )
+    {
+        $data = "\n(0) Données trouvées!\n";
+    }
+
+    header("Content-type: application/octet-stream");
+    header("Content-Disposition: attachment; filename=donnees_extraites.xls");
+    header("Pragma: no-cache");
+    header("Expires: 0");
+    print "$header\n$data";
+
 ?>

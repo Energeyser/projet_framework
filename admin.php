@@ -8,6 +8,7 @@ dispatch('/ajouter_promo', 'promo_ajouter');
 dispatch('/supprimer_promo','promo_supprimer');
 dispatch('/modifier_promo','promo_modifier');
 dispatch('/fichiers', 'fichiers');
+dispatch('/fichiers_modifier', 'fichiers_modifier');
 dispatch('/ajouter_fichiers', 'fichiers_ajouter');
 dispatch('/donnees', 'donnees');
 dispatch('/modifier_donnees/*','modifier_donnees');
