@@ -46,14 +46,8 @@
         }
         ?>
 
-<<<<<<< HEAD
-        <div>
-            <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire</button>
-=======
     <div>
         <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire au format .xls</button>
->>>>>>> projet_framework/master
-
         </div>
         <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
     </div>
