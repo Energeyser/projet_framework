@@ -1,7 +1,7 @@
 <?php content_for('main'); ?>
 <?php
         try {
-            $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
+            $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
             $reponse = $bdd->query('SELECT promo, id FROM document GROUP BY promo');
         ?>
     <link href="./css/style.css" rel="stylesheet">
