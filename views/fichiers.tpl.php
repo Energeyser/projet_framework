@@ -12,7 +12,6 @@ try {
 ?>
 <div class="row">
     <div class="col-md-6">
-        <form name="tab_fichiers" metod="post" action="">
             <table class="table">
                 <thead>
                     <tr>
@@ -30,20 +29,19 @@ try {
                         <td><?php echo $fichiers['promo']?></td>
                         <td><?php echo $fichiers['libelle']?></td>
                         <td><?php echo $fichiers['fichier']?></td>
-                        <td><a href="./fichiers_modifier?fichier=<?php echo $fichiers['fichier']?>"><button type="button" class="btn btn-lg btn-default">Modifier</button></a></td>
-                        <td><a  href="../controllers/fichiers/fichiers_supprimer.php?fichier=<?php echo $fichiers['fichier']?>"><button type="button" class="btn btn-lg btn-default">Supprimer</button></a></td>
+                        <td><a href="./fichiers_modifier?fichier=<?php echo $fichiers['fichier']?>"><button type="button" class="btn btn-lg btn-modif">Modifier</button></a></td>
+                        <td><a  href="../controllers/fichiers/fichiers_supprimer.php?fichier=<?php echo $donnees['fichier']?>"><button type="button" class="btn btn-lg btn-suppr">Supprimer</button></a></td>
                     </tr>
                     <?php
                     }
                     ?>
                 </tbody>
             </table>
-        </form>
     </div>
 </div>
-<div>
-    <a href="./ajouter_fichiers"><button type="button" class="btn btn-lg btn-default">Ajouter un fichier</button>
-        <a href="../admin.php"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+ <div>
+            <a href="./ajouter_fichiers"><button type="button" class="btn btn-lg btn-modif">Ajouter un fichier</button>
+            <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
         </div>
 
     <?php end_content_for(); ?>

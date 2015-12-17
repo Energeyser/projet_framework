@@ -6,8 +6,9 @@
     <h2 class="ajout-donnees-heading">Ajouter une promo</h2>
     <label for="inputPromo" class="sr-only">Promo</label>
     <input type="text" id="promo" name="promo" class="form-control" required autofocus><br/>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
+    <button class="btn btn-lg btn-primary btn-ajouter" type="submit">Ajouter</button>
 </form>
 
-<a href="../admin.php/promos"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+<a href="../admin.php/promos"><button type="button" class="btn btn-lg btn-retour">Retour</button></a>
+
 <?php end_content_for(); ?>

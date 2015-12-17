@@ -1,8 +1,9 @@
-<!--fichier template pour l'affichage du panneau principal de gestion des promos-->
+<<<<<<< HEAD
+           <!--fichier template pour l'affichage du panneau principal de gestion des promos-->
 <?php content_for('main');
 //recupération des données concernant les promos depuis la base de données
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
+    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
     $sql = $bdd->query('SELECT promo, id FROM document GROUP BY promo');
 } catch(Exception $e) {
     die('Erreur: '.$e->getMessage());
@@ -13,7 +14,7 @@ try {
     <h2>Promos</h2></br>
 <div class="row">
     <div class="col-md-6">
-        <a href="./ajouter_promo"><button type="button" class="btn btn-lg btn-suppr">Ajouter</button></a>
+        <a href="./ajouter_promo"><button type="button" class="btn btn-lg btn-ajouter">Ajouter</button></a>
         <table class="table">
             <thead>
                 <tr>

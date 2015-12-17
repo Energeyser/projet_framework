@@ -47,8 +47,8 @@ try {
 
 
 <div>
-    <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-default">Extraire au format .xls</button>
+        <a href="../controllers/donnees/donnees_extraire.php"><button type="button" class="btn btn-lg btn-modif">Extraire au format .xls</button>
         </div>
-    <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
+        <a href="../admin.php"><button type="button" class="btn btn-retour">Retour</button></a>
 </div>
 <?php end_content_for(); ?>

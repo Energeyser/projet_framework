@@ -41,10 +41,7 @@ La modification est geree par le fichier fichier_modifier.php-->
         </table>
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
-    <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
-
-
+    <button class="btn btn-lg btn-primary btn-modifier" type="submit">Modifier</button>
+    <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-retour">Retour</button></a>
 </form>
-
 <?php end_content_for(); ?>

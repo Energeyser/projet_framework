@@ -1,4 +1,5 @@
-<!--fichier template pour l'affichage du panneau principal de modification des fichiers-->
+<<<<<<< HEAD
+           <!--fichier template pour l'affichage du panneau principal de modification des fichiers-->
 <?php content_for('main');
 //recupération des données concernant les promos depuis la base de données
 try {
@@ -36,8 +37,8 @@ try {
         </table>
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Ajouter</button>
-    <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+    <button class="btn btn-lg btn-primary btn-ajouter" type="submit">Ajouter</button>
+    <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-retour">Retour</button></a>
 
 
 </form>
