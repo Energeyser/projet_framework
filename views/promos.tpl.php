@@ -3,7 +3,7 @@
 <?php content_for('main');
 //recupération des données concernant les promos depuis la base de données
 try {
-    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
+    $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'root', '');
     $sql = $bdd->query('SELECT promo, id FROM document GROUP BY promo');
 } catch(Exception $e) {
     die('Erreur: '.$e->getMessage());

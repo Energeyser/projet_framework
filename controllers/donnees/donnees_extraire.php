@@ -4,7 +4,7 @@
 
     $sql = "SELECT * FROM data";
 
-    mysql_connect('localhost', 'rentree', 'rentree');
+    mysql_connect('localhost', 'root', '');
 
     mysql_select_db('rentree');
 
