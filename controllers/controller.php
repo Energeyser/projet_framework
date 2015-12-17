@@ -1,7 +1,7 @@
 <?php
 
 function accueil(){
-    return render('../views/accueil.tpl.php','../views/layout/admin_layout.html.php');
+    return render('../views/accueil.tpl.php','../views/layout/accueil_layout.html.php');
 }
 
 function promos(){

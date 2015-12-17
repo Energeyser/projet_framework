@@ -1,3 +1,4 @@
+<!--Layout pour l'ensemble des vues autres que la page d'accueil-->
 <!DOCTYPE html>
 <html lang="en">
   <head>

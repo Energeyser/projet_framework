@@ -1,3 +1,4 @@
+<!--Layout pour la page d'accueil-->
 <!DOCTYPE html>
 <html lang="en">
   <head>
