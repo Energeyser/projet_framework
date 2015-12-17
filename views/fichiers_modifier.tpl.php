@@ -1,20 +1,27 @@
-<?php content_for('main'); ?>
+<?php content_for('main');
+    $fichier = $_GET['fichier'];
 
-    <!--connexion à la base de données pour afficher la liste des promos dans le tableau-->
-    <?php
+    //connexion à la base de données pour afficher la liste des fichiers dans le tableau
+
     $n = 0;
         try {
             $bdd = new PDO('mysql:host=localhost;dbname=rentree;charset=utf8', 'rentree', 'rentree');
-            $reponse = $bdd->query('SELECT promo FROM document GROUP BY promo');
+            $sql = $bdd->query('SELECT libelle, fichier FROM document WHERE fichier = "'.$fichier.'"');
+            $donnees = $sql->fetch();
+            $sql = $bdd->query('SELECT promo FROM document GROUP BY promo');
+            $promos = $sql->fetch();
+            } catch(Exception $e) {
+                die('Erreur: '.$e->getMessage());
+            }
     ?>
 
-    <h1>Modification du fichier</h1></br>
-    <form class="modif_fichiers" action="../controllers/fichiers/fichiers_modifier.php" method="post" enctype="multipart/form-data">
-        <label for="inputLibelle" class="sr-only">Libellé : </label>
-        <input type="text" id="libelle" name="libelle" class="form-control" required autofocus><br/>
-        <label for="inputFichier" class="sr-only">Fichier : </label>
-        <input type="file" id="fichier" name="fichier" class="form-control" required autofocus><br/>
-        <label for="inputPromo" class="sr-only">Promo : </label>
+    <h1>Modification du fichier <?php echo $donnees['fichier'] ?></h1></br>
+    <form class="modif_fichiers" action="../controllers/fichiers/fichiers_modifier.php?fichier=<?php echo $donnees['fichier'] ?>" method="post" enctype="multipart/form-data">
+        <label for="inputLibelle" class="sr-only">Nouveau libellé : </label>
+        <input type="text" id="new_libelle" name="new_libelle" class="form-control" required autofocus placeholder="<?php echo $donnees['libelle'] ?>"><br/>
+        <label for="inputFichier" class="sr-only">Nouveau fichier : </label>
+        <input type="file" id="new_fichier" name="new_fichier" class="form-control" required><br/>
+        <label for="inputPromo" class="sr-only">Nouvelle promo : </label>
         <div id="checkbox_promos">
             <table class="table">
             <thead>
@@ -23,10 +30,10 @@
                 </tr>
             </thead>
             <tbody>
-            <?php while($donnees = $reponse->fetch()) { ?>
+            <?php while($promos = $sql->fetch()) { ?>
              <tr>
-                        <td><label for="option<?php echo $n ?>"><?php echo $donnees['promo'] ?> </label></td>
-                        <td><input type="radio" name="promo" id="promo" value="<?php echo $donnees['promo'] ?>"></td>
+                        <td><label for="option<?php echo $n ?>"><?php echo $promos['promo'] ?> </label></td>
+                        <td><input type="radio" name="new_promo" id="new_promo" value="<?php echo $promos['promo'] ?>"></td>
             </tr>
             <?php
                 $n++;
@@ -36,16 +43,9 @@
 
         </div>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Modifier</button>
-        <a href=""><button type="button" class="btn btn-lg btn-default">Retour</button></a>
+        <a href="../admin.php/fichiers"><button type="button" class="btn btn-lg btn-default">Retour</button></a>
 
 
       </form>
-
-        <?php
-            } catch(Exception $e) {
-                die('Erreur: '.$e->getMessage());
-            }
-        ?>
-
 
 <?php end_content_for(); ?>
