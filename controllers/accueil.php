@@ -1,7 +1,6 @@
 <?php
 
 function accueil(){
-    set("var", "*Ceci est une variable*");
     return render('../views/accueil.tpl.php','../views/layout/admin_layout.html.php');
 }
 

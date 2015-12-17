@@ -24,7 +24,7 @@
                                 <td><?php echo $donnees['promo']?></td>
                                 <td><?php echo $donnees['libelle']?></td>
                                 <td><?php echo $donnees['fichier']?></td>
-                                <td><a href="./fichiers_modifier"><button type="button" class="btn btn-lg btn-default">Modifier</button></a></td>
+                                <td><a href="./fichiers_modifier?fichier=<?php echo $donnees['fichier']?>"><button type="button" class="btn btn-lg btn-default">Modifier</button></a></td>
                                 <td><a  href="../controllers/fichiers/fichiers_supprimer.php?fichier=<?php echo $donnees['fichier']?>"><button type="button" class="btn btn-lg btn-default">Supprimer</button></a></td>
                             </tr>
                         <?php
